@@ -11,8 +11,8 @@ from typing import Dict, Any
 
 #################### Change this ########################
 
-DASHBOARD_URL = "http://homeassistant.local:8123/echo-show/"
-KIOSK_MODE = True
+DASHBOARD_URL = "http://homeassistant.local:8123/"
+KIOSK_MODE = False
 
 #########################################################
 
@@ -20,11 +20,11 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 TOKEN = "someToken"
 
-def open_page(number):
+def open_page():
     if KIOSK_MODE:
-        source = DASHBOARD_URL + str(number) + "?kiosk"
+        source = DASHBOARD_URL + "?kiosk"
     else:
-        source = DASHBOARD_URL + str(number)
+        source = DASHBOARD_URL
     return OpenUrlCommand(
         source = source
     )
@@ -62,7 +62,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
         response_builder.add_directive(
             ExecuteCommandsDirective(
                 token=TOKEN,
-                commands=[open_page("")]
+                commands=[open_page()]
             )
         )
         
@@ -79,7 +79,7 @@ class OpenPageIntentHandler(AbstractRequestHandler):
         # type: (HandlerInput) -> Response
 
         response_builder = handler_input.response_builder
-        number = ask_utils.request_util.get_slot(handler_input, "page").value
+        #number = ask_utils.request_util.get_slot(handler_input, "page").value
 
         # Render empty template, needed for OpenURL command
         # see https://amazon.developer.forums.answerhub.com/questions/220506/alexa-open-a-browser.html
@@ -94,7 +94,7 @@ class OpenPageIntentHandler(AbstractRequestHandler):
         response_builder.add_directive(
             ExecuteCommandsDirective(
                 token=TOKEN,
-                commands=[open_page(number)]
+                commands=[open_page()]
             )
         )
         
