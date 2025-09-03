@@ -16,7 +16,7 @@ When the skill is invoked, it uses the [OpenURL](https://developer.amazon.com/en
 http://homeassistant.local:8123/
 ```
 
-in the Silk browser on the Echo Show.
+in the Silk browser on the Echo Show. This is an example, if you change the URL, Alexa will open your page.
 
 ## Installation
 

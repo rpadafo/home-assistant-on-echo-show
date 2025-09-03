@@ -1,16 +1,18 @@
 # Installation
 
-1. In Home Assistant, go to Configuration > Dashboards and press the "Add Dashboard" button. Choose a name and the URL for the dashboard. We will use ``echo-show`` as URL. <div align="center"><img src="img/dashboard_creation.png" /></div>
+1. In Home Assistant, go to Configuration > Dashboards and press the "Add Dashboard" button. <div align="center"><img src="img/add_dashboard.jpg" /></div
 
-2. Open the dashboard click on "Edit Dashboard" in the top right corner. Tick the "Start with an empty dashboard" option and press "Take Control".<div align="center"><img src="img/take_control.png" /></div>
+2. Choose "New dashboard from Scratch" (or your favorite option). Choose a name and the URL for the dashboard. Remember the "Dashboard URL" if you want to add to the URL later. <div align="center"><img src="img/dashboard_creation.jpg" /></div>
 
-3. Edit the view "Home".<div align="center"><img src="img/edit_home.png" /></div> Rename it if you want, and choose "1" as the URL.<div align="center"><img src="img/home_view.png" /></div>
+3. Open the dashboard (click on "open"), click on "Edit Dashboard" in the top right corner.
 
-4. You can now create as many views as you like, the only important thing is that you give them unique numbers as URLs just like in the previous step. You can also do this later if you want.
+4. Edit the view "Home" if you want.<div align="center"><img src="img/edit_home.png" /></div>
 
-5. Now we're finished in Home Assistant. Open the [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask) and sign-in with the Amazon account that is linked to your Echo Show.
+5. You can now create your view as you like. Remember to adjust the elements according to the screen you are going to use.
 
-6. I recommend switching the language of the Alexa Developer Console to "English (US)" in the bottom left corner. This will make following these instructions much easier.<div align="center"><img src="img/locale.png" /></div>
+6. Now we're finished in Home Assistant. Open the [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask) and sign-in with the Amazon account that is linked to your Echo Show.
+
+7. I recommend switching the language of the Alexa Developer Console to "English (US)" in the bottom left corner. This will make following these instructions much easier.<div align="center"><img src="img/locale.png" /></div>
 
 7. Click on "Create Skill".<div align="center"><img src="img/create_skill.png" /></div>
 
