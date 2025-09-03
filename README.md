@@ -6,15 +6,9 @@ This Alexa skill adds a voice command to open Lovelace dashboards on the Echo Sh
 > **This is a fork from https://github.com/aldadic so thank you for your amazing work.**
 
 > [!NOTE]
-> The original project involves passing a URL and the page number to display. In this fork, the idea is that the URL is fixed, we always call the Home Assistant URL, and it will ask us for a username and password. We can change the Dashboard by assigning one to each user, without touching the skill URL or asking the user for extra data.
+> The original project requires a URL, a dashboard name, and a number that we assign to the Home Assistant view. In this fork, we removed the dashboard name and view number so that Alexa always opens the main URL. This way, Alexa will not ask for any additional information, and we can control the Dashboard that opens with Home Assistant users (assigning a dashboard to each user).
 
 ## How it works
-
-Let's assume your Home Assistant URL is ``http://homeassistant.local:8123``. Home Assistant dashboard URLs then have the following structure:
-
-```html
-http://homeassistant.local:8123/
-```
 
 When the skill is invoked, it uses the [OpenURL](https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/apl-standard-commands-v1-5.html#open_url_command) APL command to open the page
 
